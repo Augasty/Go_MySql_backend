@@ -21,6 +21,12 @@ func GetBook(w http.ResponseWriter, r *http.Request) {
 	w.Write(res)
 }
 
+func Hello(w http.ResponseWriter, r *http.Request){
+	w.WriteHeader(http.StatusOK)
+	res, _ := json.Marshal("message")
+	w.Write(res)
+}
+
 func GetBookById(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	bookId := vars["bookId"]

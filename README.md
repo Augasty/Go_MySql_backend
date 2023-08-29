@@ -22,5 +22,7 @@ Packages used:
 
 To run it, first setup mysql with proper user, password and permissions.
 Then, inside the cmd/main folder
+
+docker-compose up -d
 go build
 go run main.go
